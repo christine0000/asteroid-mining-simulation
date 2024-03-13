@@ -22,8 +22,9 @@ export default function TabBar({ onSelectTab }) {
             className={`iconfont ${
               activeTab === "Miners" ? "icon-miners-on" : "icon-miners-off"
             }`}
+            style={{fontSize: "32px"}}
           ></Text>
-          <Text>Miners</Text>
+          <Text style={{fontSize: "12px"}}>Miners</Text>
         </View>
       </View>
       <View
@@ -37,8 +38,9 @@ export default function TabBar({ onSelectTab }) {
                 ? "icon-asteroids-on"
                 : "icon-asteroids-off"
             }`}
+            style={{fontSize: "32px"}}
           ></Text>
-          <Text>Asteroids</Text>
+          <Text style={{fontSize: "12px"}}>Asteroids</Text>
         </View>
       </View>
       <View
@@ -50,8 +52,9 @@ export default function TabBar({ onSelectTab }) {
             className={`iconfont ${
               activeTab === "Planets" ? "icon-planets-on" : "icon-planets-off"
             }`}
+            style={{fontSize: "32px"}}
           ></Text>
-          <Text>Planets</Text>
+          <Text style={{fontSize: "12px"}}>Planets</Text>
         </View>
       </View>
       <View

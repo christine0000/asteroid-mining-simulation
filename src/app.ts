@@ -10,13 +10,13 @@ function App({ children }: PropsWithChildren) {
   useEffect(() => {
     Taro.getSystemInfo().then((res) => {
       let titleBarHeight = "0px";
-      let statusBarHeight = "0px";
+      let statusBarHeight = "47px";
       if (res.model.indexOf("iPhone") !== -1) {
         titleBarHeight = 44 + "px";
       } else {
         titleBarHeight = 48 + "px";
       }
-      statusBarHeight = res.statusBarHeight + "px";
+      // statusBarHeight = res.statusBarHeight + "px";
       Taro.setStorageSync("titleBarHeight", titleBarHeight);
       Taro.setStorageSync("statusBarHeight", statusBarHeight);
     });

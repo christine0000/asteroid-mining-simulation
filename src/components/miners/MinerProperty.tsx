@@ -1,4 +1,5 @@
 import { View, Text } from "@tarojs/components";
+import "./index.scss"
 
 export default function MinerProperty({
   title,
@@ -7,8 +8,8 @@ export default function MinerProperty({
 }) {
   return (
     <View className="minerProperty">
-      <Text style={{ color: "#C7CED199", fontSize: "18rpx" }}>{title}</Text>
-      <Text style={{ color: contentColor, fontSize: "28rpx" }}>{content}</Text>
+      <Text style={{ color: "#C7CED199", fontSize: "9px" }}>{title}</Text>
+      <Text style={{ color: contentColor, fontSize: "14px" }}>{content}</Text>
     </View>
   );
 }

@@ -1,22 +1,31 @@
 import { View, Text } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 import "./index.scss";
 import MinerProperty from "./MinerProperty";
 import { MINER_STATUS_MAP } from "../../constant";
 
 export default function MinerItem({ miner }) {
+  function clickMiner() {
+    console.log(miner._id);
+    Taro.navigateTo({
+      url: "/pages/minerHistory/index", 
+    });
+  }
   return (
-    <View className="minerItem">
+    <View className="minerItem" onClick={clickMiner}>
       <View className="left fontBold">
         <View>
-          <View style={{ fontSize: "16rpx" }}>{miner.planet}</View>
-          <View style={{ fontSize: "32rpx" }}>{miner.name}</View>
+          <View style={{ fontSize: "8px" }}>{miner.planet.name}</View>
+          <View style={{ fontSize: "16px" }}>{miner.name}</View>
         </View>
-        <View className="statusBotton">{MINER_STATUS_MAP[miner.status]}</View>
+        <View className="statusBotton" style={{ fontSize: "10px" }}>
+          {MINER_STATUS_MAP[miner.status]}
+        </View>
       </View>
       <View className="right">
-        <View style={{ display: "flex", marginRight: "32rpx" }}>
+        <View style={{ display: "flex", marginRight: "16px" }}>
           <View>
-            <View style={{ marginRight: "32rpx", marginBottom: "4rpx" }}>
+            <View style={{ marginRight: "16px", marginBottom: "2px" }}>
               <MinerProperty
                 title="Carry Capacity"
                 content={`${miner.carryCapacity}/200`}
@@ -32,7 +41,10 @@ export default function MinerItem({ miner }) {
             <MinerProperty title="Travel Speed" content={miner.travelSpeed} />
           </View>
         </View>
-        <Text className="iconfont icon-right-arrow" style={{ fontSize: "24rpx" }}></Text>
+        <Text
+          className="iconfont icon-right-arrow"
+          style={{ fontSize: "12px" }}
+        ></Text>
       </View>
     </View>
   );

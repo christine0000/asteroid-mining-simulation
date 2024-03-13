@@ -1,12 +1,11 @@
 import { View } from "@tarojs/components";
-import MinerTitle from "./MinerTitle";
 import MinerItem from "./MinerItem";
+import "./index.scss"
 
 export default function MinerList({ minerList }) {
   return (
     <View>
-      <MinerTitle years={200} />
-      <View style={{ marginTop: "86rpx", paddingTop: "32rpx" }}>
+      <View style={{ marginTop: "43px", paddingTop: "16px" }}>
         {minerList.map((miner) => (
           <MinerItem miner={miner} key={miner._id} />
         ))}

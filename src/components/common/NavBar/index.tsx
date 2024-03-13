@@ -17,6 +17,7 @@ export default function NavBar({backgroundColor="#241B2D"}) {
       >
         <Text
           className="iconfont icon-Star03"
+          style={{fontSize: "20px"}}
         ></Text>
       </View>
       <View
