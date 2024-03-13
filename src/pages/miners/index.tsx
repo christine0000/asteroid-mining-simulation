@@ -4,6 +4,7 @@ import { useLoad } from "@tarojs/taro";
 import MinerList from "@/components/miner/MinerList";
 import TabBar from "@/components/common/TabBar";
 import Miners from "../../services/miners";
+import NavBar from "../../components/common/NavBar";
 import { MinerItem } from "../../../types/miner";
 import "./index.scss";
 
@@ -24,6 +25,7 @@ export default function Index() {
 
   return (
     <View className="miners">
+      <NavBar />
       {!!minerList?.length && <MinerList minerList={minerList} />}
       <TabBar onSelectTab={handleSelectTab} />
     </View>
