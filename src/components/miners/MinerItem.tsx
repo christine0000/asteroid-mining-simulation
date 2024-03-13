@@ -6,14 +6,13 @@ import { MINER_STATUS_MAP } from "../../constant";
 
 export default function MinerItem({ miner }) {
   function clickMiner() {
-    console.log(miner._id);
     Taro.navigateTo({
-      url: "/pages/minerHistory/index", 
+      url: `/pages/minerHistory/index?id=${miner._id}&name=${encodeURIComponent(miner.name)}`, 
     });
   }
   return (
     <View className="minerItem" onClick={clickMiner}>
-      <View className="left fontBold">
+      <View className="left font-bold">
         <View>
           <View style={{ fontSize: "8px" }}>{miner.planet.name}</View>
           <View style={{ fontSize: "16px" }}>{miner.name}</View>
@@ -36,9 +35,6 @@ export default function MinerItem({ miner }) {
               title="Position"
               content={`${parseInt(miner.x)},${parseInt(miner.y)}`}
             />
-          </View>
-          <View>
-            <MinerProperty title="Travel Speed" content={miner.travelSpeed} />
           </View>
         </View>
         <Text

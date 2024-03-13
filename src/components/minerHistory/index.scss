@@ -1,0 +1,58 @@
+@import "../../static/css/variable";
+.history-top-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  background: $card-bg-color;
+  padding: 32px;
+  z-index: 10;
+  box-sizing: border-box;
+  .iconfont {
+    position: absolute;
+    left: 32px;
+  }
+}
+.history-list{
+    margin-top: 50px;
+}
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+  padding: 24px;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 1px; 
+    background-color: white; 
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+  }
+  .statusBotton {
+    padding: 3px 6px;
+    border-radius: 2px;
+    background-color: #504b5a;
+    flex: 0 0 auto;
+    width: fit-content;
+  }
+}
