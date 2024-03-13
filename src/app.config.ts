@@ -11,16 +11,12 @@ export default defineAppConfig({
     custom: true,
     list: [
       {
-        text: "首页",
-        pagePath: "pages/miners/index", //页面路由地址，需要在上面的pages中也添加该路由
-        // iconPath: "assets/tabbar/home.png", //底部导航栏图标
-        // selectedIconPath: "assets/tabbar/home_active.png", //底部导航栏选中图标
+        text: "HOME",
+        pagePath: "pages/miners/index",
       },
       {
-        text: "test",
+        text: "TEST",
         pagePath: "pages/miners/index",
-        // iconPath: "assets/tabbar/add.png",
-        // selectedIconPath: "assets/tabbar/add_active.png",
       },
     ],
   },
