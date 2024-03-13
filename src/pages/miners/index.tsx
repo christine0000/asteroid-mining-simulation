@@ -9,9 +9,9 @@ import "./index.scss";
 
 export default function Index() {
   useLoad(() => {
-    console.log("Page loaded.");
+    // console.log("Page loaded.");
     new Miners().getMinersList().then((data) => {
-      console.log(data);
+      // console.log(data);
       setMinerList(data as MinerItem[]);
     });
   });

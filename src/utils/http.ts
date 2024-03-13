@@ -53,11 +53,11 @@ class HTTP {
       method: method as any,
       data: data,
       success: (res) => {
-        console.log("请求成功", res.data);
+        // console.log("请求成功", res.data);
         resolve(res.data);
       },
       fail: (err) => {
-        console.log("errorsss", err);
+        console.log("error: ", err);
         reject(err);
       },
     });
