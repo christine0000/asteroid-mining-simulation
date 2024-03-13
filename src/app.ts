@@ -3,18 +3,14 @@ import Taro, { useLaunch } from "@tarojs/taro";
 import "./app.scss";
 import "./static/css/iconfont.css";
 
-function App({ children }: PropsWithChildren<any>) {
+function App({ children }: PropsWithChildren) {
   useLaunch(() => {
     console.log("App launched.");
-    // 在组件加载时获取系统信息
   });
   useEffect(() => {
-    console.log("app useEffect");
-    Taro.getSystemInfo().then((res: any) => {
-      console.log(res);
+    Taro.getSystemInfo().then((res) => {
       let titleBarHeight = "0px";
       let statusBarHeight = "0px";
-      // 更新状态栏高度和标题栏高度
       if (res.model.indexOf("iPhone") !== -1) {
         titleBarHeight = 44 + "px";
       } else {

@@ -1,12 +1,8 @@
 // TabBar.tsx
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { View, Text } from "@tarojs/components";
 import "./index.scss";
-
-interface TabBarProps {
-  onSelectTab: (tab: string) => void;
-}
 
 export default function TabBar({ onSelectTab }) {
   const [activeTab, setActiveTab] = useState("Miners");

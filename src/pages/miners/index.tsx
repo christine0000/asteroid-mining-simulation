@@ -12,7 +12,6 @@ export default function Index() {
   useLoad(() => {
     // console.log("Page loaded.");
     new Miners().getMinersList().then((data) => {
-      // console.log(data);
       setMinerList(data as MinerItem[]);
     });
   });
@@ -20,7 +19,7 @@ export default function Index() {
 
   const handleSelectTab = (tab: string) => {
     console.log("Selected tab:", tab);
-    // 这里可以添加处理选中菜单的逻辑
+    // TODO add logic for change tab
   };
 
   return (

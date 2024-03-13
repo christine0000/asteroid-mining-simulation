@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  pages: ["pages/miners/index", "pages/index/index"],
+  pages: ["pages/miners/index"],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#241B2D",
@@ -18,7 +18,7 @@ export default defineAppConfig({
       },
       {
         text: "test",
-        pagePath: "pages/index/index",
+        pagePath: "pages/miners/index",
         // iconPath: "assets/tabbar/add.png",
         // selectedIconPath: "assets/tabbar/add_active.png",
       },

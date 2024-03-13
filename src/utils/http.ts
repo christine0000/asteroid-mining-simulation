@@ -47,10 +47,10 @@ class HTTP {
    * @param {*} data
    * @param {*} method
    */
-  _request(url, resolve, reject, data = {}, method = "GET") {
+  _request(url, resolve, reject, data = {}, method) {
     Taro.request({
       url: BASE_URL + url,
-      method: method as any,
+      method: method,
       data: data,
       success: (res) => {
         // console.log("请求成功", res.data);

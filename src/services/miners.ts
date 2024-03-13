@@ -1,5 +1,4 @@
 import HTTP from "@/utils/http";
-import { MinerItem } from "types/miner";
 
 const URL_GET_MINERS_LIST = "/miners";
 
