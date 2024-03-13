@@ -1,0 +1,60 @@
+.minerItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+  padding: 24rpx 48rpx;
+  border-radius: 20rpx;
+  background-color: #312a3b;
+  color: white;
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+  }
+  .statusBotton {
+    padding: 6rpx 12rpx;
+    border-radius: 4rpx;
+    font-size: 20rpx;
+    background-color: #504b5a;
+    flex: 0 0 auto;
+    width: fit-content;
+  }
+  .fontBold {
+    font-weight: 500;
+  }
+}
+
+.minerProperty {
+  display: flex;
+  flex-direction: column;
+}
+
+.minerTitleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-bottom: 40rpx;
+  padding-top: 40rpx;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#0d0216, 1),
+    rgba(#0d0216, 1),
+    rgba(#0d0216, 1),
+    rgba(#0d0216, 0)
+  );
+  .minerTitle {
+    padding: 12rpx;
+    border-radius: 8rpx;
+    background-color: #312a3b;
+    font-size: 32rpx;
+    color: white;
+  }
+}
