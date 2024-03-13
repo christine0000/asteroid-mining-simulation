@@ -1,4 +1,4 @@
-import { View } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import "./index.scss";
 import MinerProperty from "./MinerProperty";
 import { MINER_STATUS_MAP } from "../../constant";
@@ -32,7 +32,7 @@ export default function MinerItem({ miner }) {
             <MinerProperty title="Travel Speed" content={miner.travelSpeed} />
           </View>
         </View>
-        <View style={{ fontSize: "45rpx" }}>{`>`}</View>
+        <Text className="iconfont icon-right-arrow" style={{ fontSize: "24rpx" }}></Text>
       </View>
     </View>
   );

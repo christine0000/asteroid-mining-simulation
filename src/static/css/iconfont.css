@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4464799 */
+  src: url('iconfont.woff2?t=1710302851511') format('woff2'),
+       url('iconfont.woff?t=1710302851511') format('woff'),
+       url('iconfont.ttf?t=1710302851511') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-asteroids-on:before {
+  content: "\e606";
+}
+
+.icon-asteroids-off:before {
+  content: "\e607";
+}
+
+.icon-Icon-livemapoff:before {
+  content: "\e608";
+}
+
+.icon-miners-on:before {
+  content: "\e609";
+}
+
+.icon-miners-off:before {
+  content: "\e60a";
+}
+
+.icon-Plus-create-a-miner:before {
+  content: "\e60b";
+}
+
+.icon-Icon-livemap:before {
+  content: "\e60c";
+}
+
+.icon-Star03:before {
+  content: "\e60d";
+}
+
+.icon-Vector-miner:before {
+  content: "\e60e";
+}
+
+.icon-planets-on:before {
+  content: "\e60f";
+}
+
+.icon-planets-off:before {
+  content: "\e610";
+}
+
+.icon-right-arrow:before {
+  content: "\e611";
+}
+
+.icon-a-Planet24:before {
+  content: "\e612";
+}
+

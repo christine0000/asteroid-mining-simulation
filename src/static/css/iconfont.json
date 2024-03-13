@@ -1,0 +1,100 @@
+{
+  "id": "4464799",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "39531223",
+      "name": "asteroids-on",
+      "font_class": "asteroids-on",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "39531224",
+      "name": "asteroids-off",
+      "font_class": "asteroids-off",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "39531225",
+      "name": "Icon-livemapoff",
+      "font_class": "Icon-livemapoff",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "39531226",
+      "name": "miners-on",
+      "font_class": "miners-on",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "39531227",
+      "name": "miners-off",
+      "font_class": "miners-off",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "39531228",
+      "name": "Plus-create-a-miner",
+      "font_class": "Plus-create-a-miner",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "39531229",
+      "name": "Icon-livemap",
+      "font_class": "Icon-livemap",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "39531230",
+      "name": "Star03",
+      "font_class": "Star03",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "39531231",
+      "name": "Vector-miner",
+      "font_class": "Vector-miner",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "39531232",
+      "name": "planets-on",
+      "font_class": "planets-on",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "39531233",
+      "name": "planets-off",
+      "font_class": "planets-off",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "39531234",
+      "name": "right-arrow",
+      "font_class": "right-arrow",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "39531235",
+      "name": "Planet 24",
+      "font_class": "a-Planet24",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    }
+  ]
+}
