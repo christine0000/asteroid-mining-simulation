@@ -97,7 +97,7 @@ src/
 
 In the project directory, you can run:
 
-### `npm run dev:h5`
+### `npm install`
 
 Install all project dependencies.
 
