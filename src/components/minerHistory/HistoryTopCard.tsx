@@ -9,14 +9,14 @@ export default function HistoryTopCard({ miner }) {
   if (!context) {
     throw new Error("useMyContext must be used within a MyProvider");
   }
-  const { titleBarHeight, statusBarHeight } = context;
+  const { titleBarHeight } = context;
   function back() {
     Taro.navigateBack();
   }
   return (
     <View
       className="history-top-card"
-      style={{ top: `calc(${titleBarHeight} + ${statusBarHeight} + 65px)` }}
+      style={{ top: `calc(${titleBarHeight} + 65px)` }}
     >
       <Text style={{ fontSize: "8px" }}>{miner.planet}</Text>
       <Text className="font-bold" style={{ fontSize: "18px" }}>

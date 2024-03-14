@@ -28,13 +28,13 @@ export default function TabBar() {
       {tabList.map((tab) => (
         <View
           key={tab.name}
-          className={`tab ${activeTab && activeTab.name === tab.name && "active"}`}
+          className={`tab ${activeTab.name === tab.name && "active"}`}
           onClick={() => handleTabClick(tab)}
         >
           <View className="tab-content">
             <Text
               className={`iconfont ${
-                activeTab && activeTab.name === tab.name
+                activeTab.name === tab.name
                   ? tab.activeIconClass
                   : tab.inactiveIconClass
               }`}
@@ -47,7 +47,7 @@ export default function TabBar() {
       <View
         className="indicator"
         style={{
-          left: activeTab && activeTab.indicatorPosition,
+          left: activeTab.indicatorPosition,
         }}
       ></View>
     </View>

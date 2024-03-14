@@ -8,9 +8,9 @@ export default function MinerTitle({ years }) {
   if (!context) {
     throw new Error("useMyContext must be used within a MyProvider");
   }
-  const { titleBarHeight, statusBarHeight } = context;
+  const { titleBarHeight } = context;
   return (
-    <View className="minerTitleContainer" style={{top: `calc(${titleBarHeight} + ${statusBarHeight})`}}>
+    <View className="minerTitleContainer" style={{top: `calc(${titleBarHeight})`}}>
       <View className="minerTitle" style={{fontSize: "16px"}}>{years} YEARS</View>
     </View>
   );

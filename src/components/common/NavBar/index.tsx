@@ -8,14 +8,13 @@ export default function NavBar({ backgroundColor = "#241B2D" }) {
   if (!context) {
     throw new Error("useMyContext must be used within a MyProvider");
   }
-  const { titleBarHeight, statusBarHeight } = context;
+  const { titleBarHeight } = context;
   return (
     <View>
       <View
         className="nav-bar"
         style={{
           height: titleBarHeight,
-          paddingTop: statusBarHeight,
           backgroundColor: backgroundColor,
         }}
       >
@@ -25,7 +24,7 @@ export default function NavBar({ backgroundColor = "#241B2D" }) {
         ></Text>
       </View>
       <View
-        style={{ height: titleBarHeight, paddingTop: statusBarHeight }}
+        style={{ height: titleBarHeight }}
       ></View>
     </View>
   );
