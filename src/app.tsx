@@ -29,9 +29,7 @@ function App({ children }: PropsWithChildren) {
   };
 
   return (
-    <MyContext.Provider
-      value={{ tab, updateTab, titleBarHeight }}
-    >
+    <MyContext.Provider value={{ tab, updateTab, titleBarHeight }}>
       {children}
     </MyContext.Provider>
   );

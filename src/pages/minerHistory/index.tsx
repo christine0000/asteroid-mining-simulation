@@ -25,7 +25,7 @@ export default function MinerDetails() {
       setMinerHistory(
         (data as any[]).map((item) => ({
           ...item,
-          name: decodeURIComponent(name as string),
+          planet: { name: decodeURIComponent(name as string) },
         })) as any[]
       );
     });

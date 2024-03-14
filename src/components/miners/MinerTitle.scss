@@ -1,0 +1,24 @@
+@import "../../static/css/variable";
+.minerTitleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#0d0216, 1),
+    rgba(#0d0216, 1),
+    rgba(#0d0216, 1),
+    rgba(#0d0216, 0)
+  );
+  .minerTitle {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: $card-bg-color;
+    color: white;
+    z-index: 10;
+  }
+}

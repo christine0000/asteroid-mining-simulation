@@ -2,9 +2,10 @@ import { View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { useContext } from "react";
 import { MyContext } from "@/app";
+import { Miner } from "../../types/miner";
 import "./HistoryTopCard.scss";
 
-export default function HistoryTopCard({ miner }) {
+export default function HistoryTopCard({ miner }: { miner: Miner }) {
   const context = useContext(MyContext);
   if (!context) {
     throw new Error("useMyContext must be used within a MyProvider");
@@ -18,7 +19,7 @@ export default function HistoryTopCard({ miner }) {
       className="history-top-card"
       style={{ top: `calc(${titleBarHeight} + 65px)` }}
     >
-      <Text style={{ fontSize: "8px" }}>{miner.planet}</Text>
+      <Text style={{ fontSize: "8px" }}>{miner.planet.name}</Text>
       <Text className="font-bold" style={{ fontSize: "18px" }}>
         {miner.name}
       </Text>

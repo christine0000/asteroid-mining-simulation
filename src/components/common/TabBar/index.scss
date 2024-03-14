@@ -27,21 +27,17 @@
     flex-direction: column;
     justify-content: center;
     font-weight: 400;
-    .iconfont{
+    .iconfont {
       margin-bottom: 8px;
     }
   }
 }
 
-// .tab.active {
-//   font-weight: bold;
-// }
-
 .indicator {
   position: absolute;
   top: 40px;
   left: 0;
-  width:38%;
+  width: 38%;
   height: 4px;
   background-color: #fff;
   transition: left 0.3s ease;

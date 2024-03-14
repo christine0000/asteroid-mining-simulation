@@ -13,7 +13,7 @@ export default function TabBar() {
     throw new Error("useMyContext must be used within a MyProvider");
   }
   const { tab: currentTabIndex, updateTab } = context;
-  const activeTab = currentTabIndex ? tabList[currentTabIndex] : tabList[0];
+  const activeTab = tabList[currentTabIndex];
 
   const handleTabClick = (currentTab) => {
     Taro.redirectTo({

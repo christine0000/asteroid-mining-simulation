@@ -4,7 +4,11 @@ import plant2Src from "../../static/images/planet-2.png";
 import plant3Src from "../../static/images/planet-3.png";
 import "./PlanetItem.scss";
 
-function PlanetItem({ planet }) {
+interface Props {
+  planet: { name: string; minerals: number };
+}
+
+export default function PlanetItem({ planet }: Props) {
   return (
     <View className="planet-container">
       {planet && planet.name === "Planet 1" && (
@@ -35,4 +39,3 @@ function PlanetItem({ planet }) {
     </View>
   );
 }
-export default PlanetItem;

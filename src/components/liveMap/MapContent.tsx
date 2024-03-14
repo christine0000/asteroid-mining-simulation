@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import socket from "../../utils/socket";
 import PlanetItem from "./PlanetItem";
 import asteroidIconSrc from "../../static/images/asteroid-icon.svg";
-import "./Mining.scss";
+import "./MapContent.scss";
 
 export default function MapContent() {
   const [mapInfo, setMapInfo] = useState<any>({});
@@ -22,7 +22,7 @@ export default function MapContent() {
               key={planet._id}
               style={{
                 left: `${(planet.position.x * 100) / 1000}%`,
-                top:`${(planet.position.y * 100) / 1000}%`,
+                top: `${(planet.position.y * 100) / 1000}%`,
               }}
             >
               <PlanetItem planet={planet}></PlanetItem>
@@ -51,8 +51,9 @@ export default function MapContent() {
               style={{
                 left: `${(miner.x * 100) / 1000}%`,
                 top: `${(miner.y * 100) / 1000}%`,
-                transform:
-                  `translate(-50%, -50%) rotate(${miner.angle + 90}deg)`,
+                transform: `translate(-50%, -50%) rotate(${
+                  miner.angle + 90
+                }deg)`,
               }}
             ></View>
           ))}

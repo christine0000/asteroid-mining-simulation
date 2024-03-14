@@ -3,7 +3,10 @@ import { useContext } from "react";
 import { MyContext } from "@/app";
 import "./index.scss";
 
-export default function NavBar({ backgroundColor = "#241B2D" }) {
+interface Props {
+  backgroundColor?: string;
+}
+export default function NavBar({ backgroundColor = "#241B2D" }: Props) {
   const context = useContext(MyContext);
   if (!context) {
     throw new Error("useMyContext must be used within a MyProvider");
@@ -23,9 +26,7 @@ export default function NavBar({ backgroundColor = "#241B2D" }) {
           style={{ fontSize: "20px" }}
         ></Text>
       </View>
-      <View
-        style={{ height: titleBarHeight }}
-      ></View>
+      <View style={{ height: titleBarHeight }}></View>
     </View>
   );
 }

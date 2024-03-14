@@ -1,8 +1,8 @@
 import { View } from "@tarojs/components";
 import MinerItem from "./MinerItem";
-import "./index.scss"
+import { Miner } from "../../types/miner";
 
-export default function MinerList({ minerList }) {
+export default function MinerList({ minerList }:{minerList: Miner[]}) {
   return (
     <View>
       <View style={{ marginTop: "43px", paddingTop: "16px" }}>

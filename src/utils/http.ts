@@ -4,7 +4,7 @@ const BASE_URL = "https://asteroids.dev.mediasia.cn";
 
 class HTTP {
   /**
-   * GET类型的网络请求
+   * GET
    */
   getRequest(url, data) {
     return new Promise((resolve, reject) => {
@@ -13,7 +13,7 @@ class HTTP {
   }
 
   /**
-   * DELETE类型的网络请求
+   * DELETE
    */
   deleteRequest(url, data) {
     return new Promise((resolve, reject) => {
@@ -22,7 +22,7 @@ class HTTP {
   }
 
   /**
-   * PUT类型的网络请求
+   * PUT
    */
   putRequest(url, data) {
     return new Promise((resolve, reject) => {
@@ -31,7 +31,7 @@ class HTTP {
   }
 
   /**
-   * POST类型的网络请求
+   * POST
    */
   postRequest(url, data) {
     return new Promise((resolve, reject) => {
@@ -40,7 +40,7 @@ class HTTP {
   }
 
   /**
-   * request 包装函数
+   * request methods
    * @param {*} url
    * @param {*} resolve
    * @param {*} reject
@@ -53,7 +53,6 @@ class HTTP {
       method: method,
       data: data,
       success: (res) => {
-        // console.log("请求成功", res.data);
         resolve(res.data);
       },
       fail: (err) => {

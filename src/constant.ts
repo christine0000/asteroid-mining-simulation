@@ -11,13 +11,13 @@ export const tabList = [
     activeIconClass: "icon-miners-on",
     inactiveIconClass: "icon-miners-off",
     url: "/pages/miners/index",
-    indicatorPosition: "6%"
+    indicatorPosition: "6%",
   },
   {
     name: "Live Map",
     activeIconClass: "icon-Icon-livemap",
     inactiveIconClass: "icon-Icon-livemapoff",
     url: "/pages/liveMap/index",
-    indicatorPosition: "56%"
+    indicatorPosition: "56%",
   },
 ];

@@ -1,10 +1,11 @@
 import { View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
-import "./index.scss";
 import MinerProperty from "./MinerProperty";
 import { MINER_STATUS_MAP } from "../../constant";
+import { Miner } from "../../types/miner";
+import "./MinerItem.scss";
 
-export default function MinerItem({ miner }) {
+export default function MinerItem({ miner }: { miner: Miner }) {
   function clickMiner() {
     Taro.navigateTo({
       url: `/pages/minerHistory/index?id=${miner._id}&name=${encodeURIComponent(
@@ -35,11 +36,14 @@ export default function MinerItem({ miner }) {
             </View>
             <MinerProperty
               title="Position"
-              content={`${parseInt(miner.x)},${parseInt(miner.y)}`}
+              content={`${Math.round(miner.x)},${Math.round(miner.y)}`}
             />
           </View>
           <View>
-            <MinerProperty title="Travel Speed" content={miner.travelSpeed} />
+            <MinerProperty
+              title="Travel Speed"
+              content={miner.travelSpeed + ""}
+            />
           </View>
         </View>
         <Text

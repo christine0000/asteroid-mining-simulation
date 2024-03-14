@@ -2,9 +2,10 @@ import { View } from "@tarojs/components";
 import { format } from "date-fns";
 import MinerProperty from "../miners/MinerProperty";
 import { MINER_STATUS_MAP } from "../../constant";
+import { MinerHistory } from "../../types/miner";
 import "./HistoryItem.scss";
 
-export default function HistoryItem({ history }) {
+export default function HistoryItem({ history }: { history: MinerHistory }) {
   return (
     <View className="history-item">
       <View className="left font-bold">
@@ -12,7 +13,7 @@ export default function HistoryItem({ history }) {
           <View style={{ fontSize: "8px" }}>
             {format(history.updatedAt, "d/MM/yyyy, h:mm:ss a")}
           </View>
-          <View style={{ fontSize: "16px" }}>{history.name}</View>
+          <View style={{ fontSize: "16px" }}>Year {history.year}</View>
         </View>
         <View className="statusBotton" style={{ fontSize: "10px" }}>
           {MINER_STATUS_MAP[history.status]}
@@ -34,7 +35,7 @@ export default function HistoryItem({ history }) {
           <View>
             <MinerProperty
               title="Mining Speed"
-              content={history.speed.mining}
+              content={history.speed.mining + ""}
             />
           </View>
         </View>
@@ -42,13 +43,15 @@ export default function HistoryItem({ history }) {
           <View style={{ marginRight: "16px", marginBottom: "2px" }}>
             <MinerProperty
               title="Travel Speed"
-              content={history.speed.travel}
+              content={history.speed.travel + ""}
             />
           </View>
           <View>
             <MinerProperty
               title="Position"
-              content={`${parseInt(history.position.x)},${parseInt(history.position.y)}`}
+              content={`${Math.round(history.position.x)},${Math.round(
+                history.position.y
+              )}`}
             />
           </View>
         </View>
