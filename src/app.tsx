@@ -1,5 +1,5 @@
-import { PropsWithChildren, useEffect, createContext, useState } from "react";
-import Taro, { useLaunch } from "@tarojs/taro";
+import { PropsWithChildren, createContext, useState } from "react";
+import  { useLaunch } from "@tarojs/taro";
 import "./app.scss";
 import "./static/css/iconfont.css";
 
