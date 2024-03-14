@@ -97,7 +97,7 @@ src/
 
 In the project directory, you can run:
 
-### `npm run dev:h5`
+### `npm install`
 
 Install all project dependencies.
 
@@ -119,8 +119,6 @@ The application will be built for production under `dist` folder.
 
 ## Usage Instructions
 1. Please use Node 18 or above.
-
-2. Install dependencies using `npm install`.
 
   
 
