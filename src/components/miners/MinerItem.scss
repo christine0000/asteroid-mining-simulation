@@ -2,9 +2,9 @@
 .miner-item {
   display: flex;
   justify-content: space-between;
-  margin: 24px 0;
-  padding: 20px 34px;
-  border-radius: 10px;
+  margin: 24rpx 0;
+  padding: 20rpx 34rpx;
+  border-radius: 10rpx;
   background-color: $card-bg-color;
   color: white;
   .left {
@@ -18,8 +18,8 @@
     align-items: center;
   }
   .status-botton {
-    padding: 3px 6px;
-    border-radius: 2px;
+    padding: 3rpx 6rpx;
+    border-radius: 2rpx;
     background-color: #504b5a;
     flex: 0 0 auto;
     width: fit-content;

@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   color: #fff;
-  padding-bottom: 20px;
+  padding-bottom: 20rpx;
   width: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
-  padding-top: 60px;
+  padding-top: 60rpx;
   background-image: linear-gradient(
     to top,
     rgba(#0d0216, 1),
@@ -28,17 +28,17 @@
     justify-content: center;
     font-weight: 400;
     .iconfont {
-      margin-bottom: 8px;
+      margin-bottom: 8rpx;
     }
   }
 }
 
 .indicator {
   position: absolute;
-  top: 40px;
+  top: 40rpx;
   left: 0;
   width: 38%;
-  height: 4px;
+  height: 4rpx;
   background-color: #fff;
   transition: left 0.3s ease;
 }

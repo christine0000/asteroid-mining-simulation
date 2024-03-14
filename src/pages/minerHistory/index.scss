@@ -1,13 +1,13 @@
 @import "../../static/css/variable";
-.miner-item {
+.history-list {
   background-color: $primary-bg-color;
   min-height: 100vh;
-  padding: 0 20px 20px;
+  padding: 0 20rpx 20rpx;
   box-sizing: border-box;
   color: white;
   .miner-title-container {
     background-color: $primary-bg-color;
     z-index: 10;
-    padding-bottom: 30px;
+    padding-bottom: 30rpx;
   }
 }

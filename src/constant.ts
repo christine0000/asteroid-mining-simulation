@@ -21,3 +21,4 @@ export const tabList = [
     indicatorPosition: "56%",
   },
 ];
+export const titleBarHeight="60px"

@@ -2,11 +2,11 @@
   position: relative;
   margin: auto;
   width: 100%;
-  height: calc(100vh - 450px);
+  height: calc(100vh - 450rpx);
   .map-content {
     position: relative;
-    top: 150px;
-    height: calc(100vh - 600px);
+    top: 150rpx;
+    height: calc(100vh - 600rpx);
     .planet-item {
       position: absolute;
       width: 10%;
@@ -23,7 +23,7 @@
       transform: translate(-50%, -50%);
       top: 0;
       left: 0;
-      font-size: 45px;
+      font-size: 45rpx;
       transition: all 1s linear;
       color: #fff;
     }
@@ -31,7 +31,7 @@
     .asteroid-container {
       position: absolute;
       transform: translate(-50%, -50%);
-      width: 50px;
+      width: 50rpx;
     }
 
     .asteroid-img {

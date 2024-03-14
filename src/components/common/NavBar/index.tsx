@@ -1,17 +1,11 @@
 import { View, Text } from "@tarojs/components";
-import { useContext } from "react";
-import { MyContext } from "@/app";
 import "./index.scss";
+import { titleBarHeight } from "../../../constant";
 
 interface Props {
   backgroundColor?: string;
 }
 export default function NavBar({ backgroundColor = "#241B2D" }: Props) {
-  const context = useContext(MyContext);
-  if (!context) {
-    throw new Error("useMyContext must be used within a MyProvider");
-  }
-  const { titleBarHeight } = context;
   return (
     <View>
       <View
@@ -21,10 +15,7 @@ export default function NavBar({ backgroundColor = "#241B2D" }: Props) {
           backgroundColor: backgroundColor,
         }}
       >
-        <Text
-          className="iconfont icon-Star03"
-          style={{ fontSize: "20px" }}
-        ></Text>
+        <Text className="iconfont icon-Star03" style={{fontSize: "20px"}}></Text>
       </View>
       <View style={{ height: titleBarHeight }}></View>
     </View>
