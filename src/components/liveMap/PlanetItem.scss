@@ -9,6 +9,9 @@
     white-space: nowrap;
     font-size: 22rpx;
     font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0, 100%);
     &.finished {
       color: #00cf67;
     }
