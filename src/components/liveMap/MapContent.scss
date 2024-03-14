@@ -2,11 +2,11 @@
   position: relative;
   margin: auto;
   width: 100%;
-  height: calc(100vh - 450rpx);
+  height: calc(100vh - 300rpx);
   .map-content {
     position: relative;
     top: 150rpx;
-    height: calc(100vh - 600rpx);
+    height: calc(100vh - 450rpx);
     .planet-item {
       position: absolute;
       width: 10%;
