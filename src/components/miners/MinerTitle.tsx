@@ -11,10 +11,10 @@ export default function MinerTitle({ years }:{years: number}) {
   const { titleBarHeight } = context;
   return (
     <View
-      className="minerTitleContainer"
+      className="miner-title-container"
       style={{ top: `calc(${titleBarHeight})` }}
     >
-      <View className="minerTitle" style={{ fontSize: "16px" }}>
+      <View className="miner-title" style={{ fontSize: "16px" }}>
         {years} YEARS
       </View>
     </View>

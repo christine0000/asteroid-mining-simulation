@@ -15,7 +15,7 @@ export default function HistoryItem({ history }: { history: MinerHistory }) {
           </View>
           <View style={{ fontSize: "16px" }}>Year {history.year}</View>
         </View>
-        <View className="statusBotton" style={{ fontSize: "10px" }}>
+        <View className="status-botton" style={{ fontSize: "10px" }}>
           {MINER_STATUS_MAP[history.status]}
         </View>
       </View>

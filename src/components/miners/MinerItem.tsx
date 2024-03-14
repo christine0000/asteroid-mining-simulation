@@ -14,13 +14,13 @@ export default function MinerItem({ miner }: { miner: Miner }) {
     });
   }
   return (
-    <View className="minerItem" onClick={clickMiner}>
+    <View className="miner-item" onClick={clickMiner}>
       <View className="left font-bold">
         <View>
           <View style={{ fontSize: "8px" }}>{miner.planet.name}</View>
           <View style={{ fontSize: "16px" }}>{miner.name}</View>
         </View>
-        <View className="statusBotton" style={{ fontSize: "10px" }}>
+        <View className="status-botton" style={{ fontSize: "10px" }}>
           {MINER_STATUS_MAP[miner.status]}
         </View>
       </View>

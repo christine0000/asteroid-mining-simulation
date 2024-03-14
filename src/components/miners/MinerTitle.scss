@@ -1,5 +1,5 @@
 @import "../../static/css/variable";
-.minerTitleContainer {
+.miner-title-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
     rgba(#0d0216, 1),
     rgba(#0d0216, 0)
   );
-  .minerTitle {
+  .miner-title {
     padding: 12px;
     border-radius: 8px;
     background-color: $card-bg-color;
