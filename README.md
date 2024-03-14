@@ -20,9 +20,7 @@ This project, named Asteroid Mining Simulation, aims to simulate asteroid mining
 3. Install dependencies using `npm install`.
 4. Follow the start command provided in the respective branch description to run the project.
 5. Ensure proper configuration as mentioned in the important notes for each branch.
-6. Start development and contribute to the project!
 
 ## Additional Notes
-- Please adhere to the branch-specific guidelines and configurations to ensure smooth development and deployment.
 - Feel free to reach out to project maintainers for any questions or assistance.
 
