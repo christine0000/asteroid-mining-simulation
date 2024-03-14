@@ -1,6 +1,6 @@
 // TabBar.tsx
 
-import { useState, useContext, useEffect } from "react";
+import {  useContext } from "react";
 import { View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { tabList } from "../../../constant";

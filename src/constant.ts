@@ -15,8 +15,8 @@ export const tabList = [
   },
   {
     name: "Live Map",
-    activeIconClass: "icon-asteroids-on",
-    inactiveIconClass: "icon-asteroids-off",
+    activeIconClass: "icon-Icon-livemap",
+    inactiveIconClass: "icon-Icon-livemapoff",
     url: "/pages/liveMap/index",
     indicatorPosition: "56%"
   },
