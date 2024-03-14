@@ -1,8 +1,8 @@
-import { View, Text } from "@tarojs/components";
+import { View } from "@tarojs/components";
 import { format } from "date-fns";
 import MinerProperty from "../miners/MinerProperty";
 import { MINER_STATUS_MAP } from "../../constant";
-import "./index.scss";
+import "./HistoryItem.scss";
 
 export default function HistoryItem({ history }) {
   return (

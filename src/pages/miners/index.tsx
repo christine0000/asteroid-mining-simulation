@@ -22,7 +22,6 @@ export default function Index() {
       // console.log("args", args);
       setMinerList([ ...args[0].miners ]);
       setCurrentTick(args[0].currentTick)
-      // console.log("dataSource", dataSource);
     });
   });
 

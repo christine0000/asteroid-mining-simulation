@@ -1,8 +1,18 @@
 @import "../../static/css/variable";
 .live-map {
-  background-color: $primary-bg-color;
+  background-image: url("../../static/images/Background.png");
+  background-size: cover;
+  // background-color: $card-bg-color;
   min-height: 100vh;
   padding: 0 20px 20px;
   box-sizing: border-box;
   color: white;
+  .minerTitleContainer{
+    background: transparent;
+    z-index: 10;
+    padding-bottom: 30px;
+    .minerTitle{
+      background: #C7CED133;
+    }
+  }
 }

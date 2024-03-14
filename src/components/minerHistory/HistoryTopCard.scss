@@ -1,0 +1,20 @@
+@import "../../static/css/variable";
+.history-top-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  background: $card-bg-color;
+  padding: 32px;
+  z-index: 10;
+  box-sizing: border-box;
+  .iconfont {
+    position: absolute;
+    left: 32px;
+  }
+}

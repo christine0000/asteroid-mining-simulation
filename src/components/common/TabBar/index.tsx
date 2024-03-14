@@ -1,6 +1,6 @@
 // TabBar.tsx
 
-import {  useContext } from "react";
+import { useContext } from "react";
 import { View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { tabList } from "../../../constant";
@@ -13,7 +13,7 @@ export default function TabBar() {
     throw new Error("useMyContext must be used within a MyProvider");
   }
   const { tab: currentTabIndex, updateTab } = context;
-  const activeTab = tabList[currentTabIndex];
+  const activeTab = currentTabIndex ? tabList[currentTabIndex] : tabList[0];
 
   const handleTabClick = (currentTab) => {
     Taro.redirectTo({
@@ -28,7 +28,7 @@ export default function TabBar() {
       {tabList.map((tab) => (
         <View
           key={tab.name}
-          className={`tab ${activeTab.name === tab.name && "active"}`}
+          className={`tab ${activeTab && activeTab.name === tab.name && "active"}`}
           onClick={() => handleTabClick(tab)}
         >
           <View className="tab-content">

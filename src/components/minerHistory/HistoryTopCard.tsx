@@ -2,7 +2,7 @@ import { View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { useContext } from "react";
 import { MyContext } from "@/app";
-import "./index.scss";
+import "./HistoryTopCard.scss";
 
 export default function HistoryTopCard({ miner }) {
   const context = useContext(MyContext);
