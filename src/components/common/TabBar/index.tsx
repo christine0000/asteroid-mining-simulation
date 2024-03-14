@@ -34,7 +34,7 @@ export default function TabBar() {
           <View className="tab-content">
             <Text
               className={`iconfont ${
-                activeTab.name === tab.name
+                activeTab && activeTab.name === tab.name
                   ? tab.activeIconClass
                   : tab.inactiveIconClass
               }`}
@@ -47,7 +47,7 @@ export default function TabBar() {
       <View
         className="indicator"
         style={{
-          left: activeTab.indicatorPosition,
+          left: activeTab && activeTab.indicatorPosition,
         }}
       ></View>
     </View>

@@ -7,7 +7,9 @@ import { MINER_STATUS_MAP } from "../../constant";
 export default function MinerItem({ miner }) {
   function clickMiner() {
     Taro.navigateTo({
-      url: `/pages/minerHistory/index?id=${miner._id}&name=${encodeURIComponent(miner.name)}`, 
+      url: `/pages/minerHistory/index?id=${miner._id}&name=${encodeURIComponent(
+        miner.name
+      )}`,
     });
   }
   return (
@@ -35,6 +37,9 @@ export default function MinerItem({ miner }) {
               title="Position"
               content={`${parseInt(miner.x)},${parseInt(miner.y)}`}
             />
+          </View>
+          <View>
+            <MinerProperty title="Travel Speed" content={miner.travelSpeed} />
           </View>
         </View>
         <Text
