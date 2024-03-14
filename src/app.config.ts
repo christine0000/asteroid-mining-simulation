@@ -1,5 +1,9 @@
 export default defineAppConfig({
-  pages: ["pages/miners/index","pages/minerHistory/index"],
+  pages: [
+    "pages/miners/index",
+    "pages/minerHistory/index",
+    "pages/liveMap/index",
+  ],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#241B2D",

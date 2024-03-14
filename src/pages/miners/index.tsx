@@ -26,17 +26,12 @@ export default function Index() {
     });
   });
 
-  const handleSelectTab = (tab: string) => {
-    console.log("Selected tab:", tab);
-    // TODO add logic for change tab
-  };
-
   return (
     <View className="miners">
       <NavBar />
       <MinerTitle years={currentTick} />
       {!!minerList?.length && <MinerList minerList={minerList} />}
-      <TabBar onSelectTab={handleSelectTab} />
+      <TabBar />
     </View>
   );
 }

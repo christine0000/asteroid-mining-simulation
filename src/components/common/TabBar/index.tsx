@@ -1,71 +1,53 @@
 // TabBar.tsx
 
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { View, Text } from "@tarojs/components";
+import Taro from "@tarojs/taro";
+import { tabList } from "../../../constant";
+import { MyContext } from "../../../app";
 import "./index.scss";
 
-export default function TabBar({ onSelectTab }) {
-  const [activeTab, setActiveTab] = useState("Miners");
+export default function TabBar() {
+  const context = useContext(MyContext);
+  if (!context) {
+    throw new Error("useMyContext must be used within a MyProvider");
+  }
+  const { tab: currentTabIndex, updateTab } = context;
+  const activeTab = tabList[currentTabIndex];
 
-  const handleTabClick = (tab: string) => {
-    setActiveTab(tab);
-    onSelectTab(tab);
+  const handleTabClick = (currentTab) => {
+    Taro.redirectTo({
+      url: currentTab.url,
+      success() {
+        updateTab(tabList.findIndex((tab) => tab.name === currentTab.name));
+      },
+    });
   };
   return (
     <View className="tab-bar">
-      <View
-        className={`tab ${activeTab === "Miners" && "active"}`}
-        onClick={() => handleTabClick("Miners")}
-      >
-        <View className="tab-content">
-          <Text
-            className={`iconfont ${
-              activeTab === "Miners" ? "icon-miners-on" : "icon-miners-off"
-            }`}
-            style={{fontSize: "32px"}}
-          ></Text>
-          <Text style={{fontSize: "12px"}}>Miners</Text>
+      {tabList.map((tab) => (
+        <View
+          key={tab.name}
+          className={`tab ${activeTab.name === tab.name && "active"}`}
+          onClick={() => handleTabClick(tab)}
+        >
+          <View className="tab-content">
+            <Text
+              className={`iconfont ${
+                activeTab.name === tab.name
+                  ? tab.activeIconClass
+                  : tab.inactiveIconClass
+              }`}
+              style={{ fontSize: "32px" }}
+            ></Text>
+            <Text style={{ fontSize: "12px" }}>{tab.name}</Text>
+          </View>
         </View>
-      </View>
-      <View
-        className={`tab ${activeTab === "Asteroids" && "active"}`}
-        onClick={() => handleTabClick("Asteroids")}
-      >
-        <View className="tab-content">
-          <Text
-            className={`iconfont ${
-              activeTab === "Asteroids"
-                ? "icon-asteroids-on"
-                : "icon-asteroids-off"
-            }`}
-            style={{fontSize: "32px"}}
-          ></Text>
-          <Text style={{fontSize: "12px"}}>Asteroids</Text>
-        </View>
-      </View>
-      <View
-        className={`tab ${activeTab === "Planets" && "active"}`}
-        onClick={() => handleTabClick("Planets")}
-      >
-        <View className="tab-content">
-          <Text
-            className={`iconfont ${
-              activeTab === "Planets" ? "icon-planets-on" : "icon-planets-off"
-            }`}
-            style={{fontSize: "32px"}}
-          ></Text>
-          <Text style={{fontSize: "12px"}}>Planets</Text>
-        </View>
-      </View>
+      ))}
       <View
         className="indicator"
         style={{
-          left:
-            activeTab === "Miners"
-              ? "6%"
-              : activeTab === "Asteroids"
-              ? "39.333%"
-              : "72.666%",
+          left: activeTab.indicatorPosition,
         }}
       ></View>
     </View>

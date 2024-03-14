@@ -1,11 +1,16 @@
 import { View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
+import { useContext } from "react";
+import { MyContext } from "@/app";
 import "./index.scss";
 
 export default function HistoryTopCard({ miner }) {
-  const titleBarHeight = Taro.getStorageSync("titleBarHeight");
-  const statusBarHeight = Taro.getStorageSync("statusBarHeight");
-  function back(){
+  const context = useContext(MyContext);
+  if (!context) {
+    throw new Error("useMyContext must be used within a MyProvider");
+  }
+  const { titleBarHeight, statusBarHeight } = context;
+  function back() {
     Taro.navigateBack();
   }
   return (
